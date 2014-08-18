@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+textarea, input {
+    outline: none;
+    padding-left: 5px;
+}
+
+/* Filter box */
+
+.filter-box {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 300px;
+    background-color: #000F1A;
+    z-index: 10000;
+    padding: 5px;
+    color: #fff;
+}
+
+.filter-box .filter-title .app-logo {
+    color: #32ADE7;
+}
+
+.filter-box .filter-title .filter-btn {
+    float: right;
+    cursor: pointer;
+}
+
+.filter-box .filter-body {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid #353333;
+}
+
+.filter-box .filter-body .filter-item {
+    height: 18px;
+    margin-bottom: 5px;
+}
+
+.filter-box .filter-body .filter-item .filter-label {
+    display: block;
+    float: left;
+    width: 85px;
+    font-size: 8px;
+    line-height: 20px;
+    padding-left: 5px;
+}
+
+.filter-box .filter-body .filter-item input {
+    width: calc(100% - 90px);
+    height: 20px;
+    border: none;
+    color: #00ACEE;
+    font-size: 9px;
+}
+
+.filter-box .form-btn {
+    margin-top: 8px;
+    border-top: 1px solid #353333;
+    padding-top: 5px;
+}
+
+.filter-box .form-btn .filter-btn {
+    padding: 2px 5px;
+    background-color: #00ACEE;
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    font-size: 10px;
+    border: none;
+}
+
+.filter-box .form-btn .filter-btn:disabled {
+    background-color: #095472;
+    color: #919191;
+    cursor: default;
+}
+
+/* Bubble style */
+
+.bubble-content .profile-image {
+    float: left;
+    border: 1px solid #ccc;
+}
+
+.bubble-content .tweet-content {
+    float: left;
+    margin-left: 5px;
+}
+
+.bubble-content .tweet-content .profile-title, .bubble-content .tweet-content .tweet {
+    max-width: 350px;
+    white-space: normal;
+}
+
+.bubble-content .tweet-content .profile-title {
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+.bubble-content .tweet-content .tweet-time {
+    margin-top: 2px;
+    font-size: 9px;
+    text-align: right;
+    color: #585858;
+}
+
+.bubble-content .twitter-link, .bubble-content .twitter-link:visited {
+    font-size: 10px;
+    color: #32ADE7;
+    text-decoration: none;
+}
+
+.clearfix {
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}

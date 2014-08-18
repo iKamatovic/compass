@@ -1,0 +1,24 @@
+<div class="filter-box">
+    <div class="filter-title">
+        <span class="app-logo">Commpas App</span><span class="filter-btn" ng-click="toggle()">Filter</span>
+    </div>
+    <div class="filter-body" ng-show="expanded">
+        <form name="f" novalidate>
+            <div class="filter-item">
+                <span class="filter-label">Location (lat,lng):</span>
+                <input type="text" ng-model="form.latlng" placeholder="52.530844,13.3868664" required/>
+            </div>
+            <div class="filter-item">
+                <span class="filter-label">Tweets until (date):</span>
+                <input type="text" datepicker ng-model="form.date" format="yy-mm-dd" default="form.date" required/>
+            </div>
+            <div class="filter-item">
+                <span class="filter-label">Tweets until (time):</span>
+                <input type="text" ng-model="form.time" placeholder="00:00" required/>
+            </div>
+            <div class="form-btn">
+                <input type="button" class="filter-btn" ng-disabled="!f.$valid" value="Apply" ng-click="submit()"/>
+            </div>
+        </form>
+    </div>
+</div>
