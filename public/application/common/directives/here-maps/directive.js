@@ -1,7 +1,7 @@
 define(['app', 'moment'], function (app, moment) {
     'use strict';
 
-    var HereMaps = function () {
+    var HereMaps = function ($timeout) {
         return {
             restrict: 'E',
 
@@ -83,7 +83,10 @@ define(['app', 'moment'], function (app, moment) {
                     _markers = createMarkers(markers);
 
                     container.objects.addAll(_markers);
-                    map.zoomTo(container.getBoundingBox());
+
+                    $timeout(function(){
+                        map.zoomTo(area.getBoundingBox());
+                    }, 600);
                 });
 
                 scope.$watch('overlay', function(overlay) {
@@ -98,6 +101,6 @@ define(['app', 'moment'], function (app, moment) {
         };
     };
 
-    angular.module('app').directive('hereMaps', [HereMaps]);
+    angular.module('app').directive('hereMaps', ['$timeout', HereMaps]);
 
 });
